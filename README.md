@@ -9,9 +9,10 @@ Thanks to Active Countermeasures RITA Tool for Zeek/Bro
 
 
 ### Finding the AS number of hosts with high beacon scores
-- doing reverse lookups on the beacons is a pain and often doesn't return anything interesting. This is a quick scripts to let you narrow down beaconish originators.
+- doing reverse lookups on the beacons is a pain and often doesn't return anything interesting. 
+- This is a quick script to let you narrow down beaconish originators using the AS number, which is more stable.
 
-As in this example many things that look beaconish are actually DNS calls or Corporate Serices. 
+As in this example many things that look beaconish are actually DNS calls or Corporate Services. 
 
 
 ```
