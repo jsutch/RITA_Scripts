@@ -32,3 +32,12 @@ for x in `rita show-beacons myhost|grep -v Source |awk -F, '{if ($1 > .8) print 
 216.58.193.67: 15169   | 216.58.193.67    | 216.58.192.0/22     | US | arin     | 2012-01-27 | GOOGLE, US
 ...
 ```
+
+## Notebooks
+### Exporatory Data Analysis of extrnal traffic
+
+- What AS Regions are generating the most connections?
+<img src=\"as_connections_by_country.png\" width=\"250\" height=\"300\">\n"
+
+- What is the relative number of high percentage beaconish activity?
+<img src=\"high_beacon_traffic_histogram.png\" width=\"250\" height=\"300\">\n"
