@@ -37,7 +37,8 @@ for x in `rita show-beacons myhost|grep -v Source |awk -F, '{if ($1 > .8) print 
 ### Exporatory Data Analysis of extrnal traffic
 
 - What AS Regions are generating the most connections?
-<img src=\"as_connections_by_country.png\" width=\"250\" height=\"300\">\n"
+![as connections by country](as_connections_by_country.png)
 
 - What is the relative number of high percentage beaconish activity?
-<img src=\"high_beacon_traffic_histogram.png\" width=\"250\" height=\"300\">\n"
+![beaconality histogram](high_beacon_traffic_histogram.png)
+s_connections_by_country.png
