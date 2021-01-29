@@ -36,6 +36,7 @@ for x in `rita show-beacons myhost|grep -v Source |awk -F, '{if ($1 > .8) print 
 ## Notebooks
 **Evaluating traffic on an external webserver**
 Watching public traffic to see if a local c2 has been installed and determine which regions are accessing services.
+
 TODO:
 - add a score if an IP has a DNS entry
 - add a score if an IP is correctly configured with a reverse
@@ -44,6 +45,7 @@ TODO:
 
 **Evaluating traffic from a home LAN**
 Here we want to mostly determine beacon-like normal services (DNS to known providers), callbacks to corporate services we expect (Apple, Microsoft, Google, etc) and others to narrow down what likely C2 or non-expected traffic is egressing. 
+
 TODO:
 - formalize True Positives
 - extract report from connections
