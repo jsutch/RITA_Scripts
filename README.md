@@ -34,11 +34,27 @@ for x in `rita show-beacons myhost|grep -v Source |awk -F, '{if ($1 > .8) print 
 ```
 
 ## Notebooks
-- evaluating traffic on an external webserver
-- evaluating traffic from a home LAN
+**Evaluating traffic on an external webserver**
+Watching public traffic to see if a local c2 has been installed and determine which regions are accessing services.
+TODO:
+- incorporate fail2ban and weblogs to make connection analysis more coherent
 
+
+**Evaluating traffic from a home LAN**
+Here we want to mostly determine beacon-like normal services (DNS to known providers), callbacks to corporate services we expect (Apple, Microsoft, Google, etc) and others to narrow down what likely C2 or non-expected traffic is egressing. 
+TODO:
+- formalize True Positives
+- extract report from connections
 
 ### Exporatory Data Analysis of extrnal traffic
+
+Here are a few examples of visualizing what the state of the connections look like. 
+- by AS
+- by Country
+- Relative percentage of traffic connection duration
+- Relative percentage of traffic that gets classified as a beacon by RITA
+- types of protocols, etc
+
 
 - What AS Regions are generating the most connections?  
 
@@ -46,3 +62,7 @@ for x in `rita show-beacons myhost|grep -v Source |awk -F, '{if ($1 > .8) print 
 
 - What is the relative number of high percentage beaconish activity?  
 ![beaconality histogram](high_beacon_traffic_histogram.png)
+
+
+
+
