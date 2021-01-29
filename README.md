@@ -34,6 +34,10 @@ for x in `rita show-beacons myhost|grep -v Source |awk -F, '{if ($1 > .8) print 
 ```
 
 ## Notebooks
+- evaluating traffic on an external webserver
+- evaluating traffic from a home LAN
+
+
 ### Exporatory Data Analysis of extrnal traffic
 
 - What AS Regions are generating the most connections?  
