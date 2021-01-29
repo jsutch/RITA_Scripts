@@ -64,7 +64,7 @@ Here are a few examples of visualizing what the state of the connections look li
 
 ![as connections by country](as_connections_by_country.png)
 
-- What is the relative number of high percentage beaconish activity?  
+- What is the relative occurance of high percentage beaconish activity?  
 ![beaconality histogram](high_beacon_traffic_histogram.png)
 
 
