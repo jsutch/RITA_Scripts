@@ -50,7 +50,7 @@ TODO:
 - formalize True Positives
 - extract report from connections
 
-### Exporatory Data Analysis of extrnal traffic
+### Exporatory Data Analysis of external traffic
 
 Here are a few examples of visualizing what the state of the connections look like. 
 - by AS
