@@ -37,11 +37,12 @@ for x in `rita show-beacons myhost|grep -v Source |awk -F, '{if ($1 > .8) print 
 **Evaluating traffic on an external webserver**  
 Watching public traffic to see if a local c2 has been installed and determine which regions are accessing services.
 
+- added a feature if an IP has a DNS entry or is correctly configured with a reverse
+- incorporated fail2ban entries
+
 TODO:
-- add a score if an IP has a DNS entry
-- add a score if an IP is correctly configured with a reverse
 - sum and sort by score to determine mystery nodes vs "well mannered" nodes
-- incorporate fail2ban and weblogs to make connection analysis more coherent (high f2b scores bump up malicious determinition)
+- summarize into dashboard
 
 **Evaluating traffic from a home LAN**  
 Here we want to mostly determine beacon-like normal services (DNS to known providers), callbacks to corporate services we expect (Apple, Microsoft, Google, etc) and others to narrow down what likely C2 or non-expected traffic is egressing. 
