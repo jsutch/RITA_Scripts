@@ -71,5 +71,23 @@ Here are a few examples of visualizing what the state of the connections look li
 ![beaconality histogram](high_beacon_traffic_histogram.png)
 
 
+### Tools
+
+There are some script tools added to make some lookups and data import easier.
+
+** bash lookups for ASNs **
+
+Simple wrappers to print out the AS numbers of beaconish activity
+
+- get_beacon_AS.sh
+- get_long_connections_asn.sh
+
+** Data preparation for the notebook visualizations**
+
+- obscureips.py -  A python script to obscure LAN ip addresses if you are presenting or sharing your output
+- rita_extractor.sh - a wrapper to gather long_connectins and beacons into named files for origin scrubbing and import into the notebook
+
+
+
 
 
