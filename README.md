@@ -41,6 +41,7 @@ Watching public traffic to see if a local c2 has been installed and determine wh
 - incorporated fail2ban entries
 
 TODO:
+- speed up the AS feature creation by creating a global AS dictionary to feed the features
 - sum and sort by score to determine mystery nodes vs "well mannered" nodes
 - summarize into dashboard
 
@@ -58,6 +59,7 @@ Here are a few examples of visualizing what the state of the connections look li
 - by Country
 - Relative percentage of traffic connection duration
 - Relative percentage of traffic that gets classified as a beacon by RITA
+- a heatmap of statistical correlations
 - types of protocols, etc
 
 
