@@ -45,7 +45,7 @@ TODO:
 - sum and sort by score to determine mystery nodes vs "well mannered" nodes
 - summarize into dashboard
 
-**Evaluating traffic from a home LAN**  
+**Evaluating traffic from a office or home LAN**  
 Here we want to mostly determine beacon-like normal services (DNS to known providers), callbacks to corporate services we expect (Apple, Microsoft, Google, etc) and others to narrow down what likely C2 or non-expected traffic is egressing. 
 
 TODO:
