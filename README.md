@@ -85,7 +85,7 @@ Simple shell wrappers to return the AS numbers of beaconish activity
 **Data preparation for the notebook visualizations**
 
 - obscureips.py -  A python script to obscure LAN ip addresses if you are presenting or sharing your output
-- rita_extractor.sh - a wrapper to gather long_connectins and beacons into named files for origin scrubbing and import into the notebook
+- rita_extractor.sh - a wrapper to gather long_connections and beacons into named files for origin scrubbing and import into the notebook
 
 
 
