@@ -37,20 +37,22 @@ for x in `rita show-beacons myhost|grep -v Source |awk -F, '{if ($1 > .8) print 
 **Evaluating traffic on an external webserver**  
 Watching public traffic to see if a local c2 has been installed and determine which regions are accessing services.
 
+- finished heuristic scoring
+- finished heuristic + RITA scoring
 - added a feature if an IP has a DNS entry or is correctly configured with a reverse
 - incorporated fail2ban entries
 
 TODO:
+- add threading to DNS lookups
 - speed up the AS feature creation by creating a global AS dictionary to feed the features
-- sum and sort by score to determine mystery nodes vs "well mannered" nodes
 - summarize into dashboard
+- make heuristics modular
+- extract report from connections
 
-**Evaluating traffic from a office or home LAN**  
+**Evaluating traffic from a office or home LAN**   
 Here we want to mostly determine beacon-like normal services (DNS to known providers), callbacks to corporate services we expect (Apple, Microsoft, Google, etc) and others to narrow down what likely C2 or non-expected traffic is egressing. 
 
-TODO:
-- formalize True Positives
-- extract report from connections
+Scoring can be used to build filters for corporate spyware and regular services (like apt checkins) to further filter out probable "bad" connections.
 
 ### Exporatory Data Analysis of external traffic
 
@@ -86,6 +88,10 @@ Simple shell wrappers to return the AS numbers of beaconish activity
 
 - obscureips.py -  A python script to obscure LAN ip addresses if you are presenting or sharing your output
 - rita_extractor.sh - a wrapper to gather long_connections and beacons into named files for origin scrubbing and import into the notebook
+
+**Get latest blacklists**
+- spamhaus_downloader.py - download the latest spamhaus blacklists, divided into ip and domain based blacklists (See rita.conf CustomIPBlacklists and CustomHostnameBlacklists)
+
 
 
 
