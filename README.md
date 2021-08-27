@@ -37,8 +37,8 @@ for x in `rita show-beacons myhost|grep -v Source |awk -F, '{if ($1 > .8) print 
 **Evaluating traffic on an external webserver**  
 Watching public traffic to see if a local c2 has been installed and determine which regions are accessing services.
 
-- finished heuristic scoring
-- finished heuristic + RITA scoring
+- added heuristic scoring
+- added heuristic + RITA scoring
 - added a feature if an IP has a DNS entry or is correctly configured with a reverse
 - incorporated fail2ban entries
 
