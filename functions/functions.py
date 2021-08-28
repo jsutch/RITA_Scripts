@@ -1,6 +1,38 @@
 """
 Collect the functions used in the notebook to make the display cleaner
 """
+# imports
+import pandas as pd
+import numpy as np
+
+# Viz imports
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# turn off warnings
+import warnings
+warnings.filterwarnings('ignore')
+
+import csv
+import json
+import datetime as datetime
+import time
+
+# ip/AS lookup tools
+import socket
+from ipwhois import IPWhois
+from ipwhois.net import Net
+from ipwhois.asn import IPASN
+
+
+def iplookup(ipaddress):
+    try: 
+        fullhostname = socket.gethostbyaddr(ipaddress)
+        hostname = fullhostname[0]
+    except Exception as e:
+        hostname = ipaddress
+    return hostname
+
 
 def getAsInfo(item, category='asn', **kwargs):
     """
@@ -42,13 +74,19 @@ def getAsInfo(item, category='asn', **kwargs):
     
 
 def is_sketchy(asn):
+    sketchy_countries = ['CN','RU','VN','HK','TW','IN','BR','RO','HU','KR','IT','UG','TR','MY','BO','CO']
     return True if asn in sketchy_countries else False 
 
 def is_corp(asn):
+    invasive_corps = ['AMAZON','APPLE','GOOGLE','MICROSOFT','CLOUDFLARENET','SALESFORCE','AKAMAI','OPENDNS']
     return True if asn in invasive_corps else False
 
 def is_sketchy_provider(asn):
-    return True if asn in sketchy_providers else False
+     sketchy_providers = []
+     providers = open('records/beaconish_asns','r').readlines()
+     for p in providers:
+            sketchy_providers.append(p.split()[0])
+     return True if asn in sketchy_providers else False
 
 def isip(id):
     """

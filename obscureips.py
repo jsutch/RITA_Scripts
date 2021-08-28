@@ -27,7 +27,7 @@ TODO:
 __author__ = "Jeff Sutch"
 __copyright__ = "Copyright 2021, Collett Park Networks"
 __credits__ = ["Jeff Sutch"]
-__license__ = "GPL"
+__license__ = "BSD 2.0"
 __version__ = "0.1.1"
 __maintainer__ = "Jeff Sutch"
 __email__ = "jeff@collettpark.com"
