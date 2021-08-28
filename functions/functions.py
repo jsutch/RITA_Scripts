@@ -132,6 +132,8 @@ def f2b_marked(s):
     return False
 
 def in_blacklist(ip):
+    blacklistraw = open('records/20210827154850_blacklisted_ips.txt','r').readlines()
+    blacklist = [x.strip('\n') for x in blacklistraw]
     if ip not in blacklist:
         return False
     return True
